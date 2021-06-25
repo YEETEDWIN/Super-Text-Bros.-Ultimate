@@ -254,13 +254,15 @@ class Olimar(Player):
     self.moves.pop("attack")
     self.moves["pikmin pluck"] = self.pluck
     self.moves["pikmin throw"] = self.throw
-    self.pikmins = 0
+    self.moves["end of day"] = self.endofday
+    self.pikmins = 5
     self.poison = 5
 
-    self.redpikmin = 0
-    self.whitepikmin = 0
-    self.yellowpikmin = 0
-    self.purplepikmin = 0
+    self.redpikmin = 1
+    self.whitepikmin = 1
+    self.yellowpikmin = 1
+    self.purplepikmin = 1
+    self.bluepikmin = 1
 
   def pluck(self, enemy):
     def redpikmin():
@@ -282,18 +284,29 @@ class Olimar(Player):
     def purplepikmin():
       damage = 35
       self.attack(enemy, damage)
+    
+    def bluepikmin():
+      damage = random.randint(15,25)
+      self.attack(enemy, damage)
 
     self.pikmins += 1
-    pikminchoices = [redpikmin, yellowpikmin, whitepikmin, purplepikmin]
+    pikminchoices = [redpikmin, yellowpikmin, whitepikmin, purplepikmin, bluepikmin]
     choice = random.choice(pikminchoices)
     if choice == redpikmin:
       self.redpikmin += 1
+      self.pikmins += 1
     elif choice == yellowpikmin:
       self.yellowpikmin += 1
+      self.pikmins += 1
     elif choice == purplepikmin:
       self.purplepikmin += 1
+      self.pikmins += 1
     elif choice == whitepikmin:
       self.whitepikmin += 1
+      self.pikmins += 1
+    elif choice == bluepikmin:
+      self.bluepikmin += 1
+      self.pikmins += 1
     choice()
   
   def throw(self, enemy):
@@ -316,19 +329,34 @@ class Olimar(Player):
     def purplepikmin():
       damage = 35
       self.attack(enemy, damage)
-
-    pikminchoices = [self.redpikmin, self.yellowpikmin, self.whitepikmin, self.purplepikmin]
+    
+    def bluepikmin():
+      damage = random.randint(15,25)
+      self.attack(enemy, damage)
+    
+    pikminchoices = ['red', 'yellow', 'white', 'purple', 'blue']
     choice = random.choice(pikminchoices)
-    if choice == self.redpikmin:
-      for pikmin in self.redpikmin:
+    if choice == 'red':
+      for pikmin in range(self.redpikmin):
         redpikmin()
-    elif choice == self.yellowpikmin:
-      for pikmin in self.yellowpikmin:
+        time.sleep(0.2)
+    elif choice == 'yellow':
+      for pikmin in range(self.yellowpikmin):
         yellowpikmin()
-    elif choice == self.purplepikmin:
-      for pikmin in self.purplepikmin:
+        time.sleep(0.2)
+    elif choice == 'purple':
+      for pikmin in range(self.purplepikmin):
         purplepikmin()
-    elif choice == self.whitepikmin:
-      for pikmin in self.whitepikmin:
+        time.sleep(0.2)
+    elif choice == 'white':
+      for pikmin in range(self.whitepikmin):
         whitepikmin()
+        time.sleep(0.2)
+    elif choice == 'blue':
+      for pikmin in range(self.bluepikmin):
+        bluepikmin()
+        time.sleep(0.2)
 
+  def endofday(self, enemy):
+    damage = self.pikmins*7
+    self.attack(enemy, damage)
