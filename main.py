@@ -16,8 +16,8 @@ time.sleep(1)
 
 while True:
 
-  chars = ['Spiderman', 'Pikachu', 'Hercules', 'Jedi', 'Samus','Voldemort', 'Thanos', 'Medusa', 'Mr.Game & Watch', 'Pit', 'Sonic','Ganondorf','R.O.B.']
-  secchars = ['Meta Knight', 'Olimar']
+  chars = ['Spiderman', 'Pikachu', 'Hercules', 'Jedi', 'Samus','Voldemort', 'Thanos', 'Medusa', 'Mr.Game & Watch', 'Pit', 'Sonic','Ganondorf','R.O.B.','Olimar']
+  secchars = ['Meta Knight']
 
   print("Do you want to choose your character or do you want it to be random? (Type 'c' for choose and 'r' for random.)")
   answer = input(">")
