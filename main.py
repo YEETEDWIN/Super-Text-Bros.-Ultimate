@@ -7,7 +7,7 @@ from secretchars import *
 from helper import *
 
 def clear():
-  os.system('clear')
+  os.system('cls' if os.name == 'nt' else 'clear')
 
 clear()
 print("Welcome to the battle game.")
@@ -16,7 +16,7 @@ time.sleep(1)
 while True:
 
   chars = ['Spiderman', 'Pikachu', 'Hercules', 'Jedi', 'Samus','Voldemort', 'Thanos', 'Medusa', 'Mr.Game & Watch', 'Pit', 'Sonic','Ganondorf','R.O.B.']
-  secchars = ['Raphael','Cijo','Meta Knight','Goku','Katsuhiko']
+  secchars = ['Meta Knight']
 
   print("Do you want to choose your character or do you want it to be random? (Type 'c' for choose and 'r' for random.)")
   answer = input(">")
@@ -63,19 +63,7 @@ while True:
     
   oppose = random.choice(chars)
 
-  if player == "Cijo":
-    user = Celements()
-
-  elif player == "Katsuhiko":
-    user = OnePunchMan()
-
-  elif player == "Raphael":
-    user = Sanic()
-
-  elif player == "Goku":
-    user = Goku()
-
-  elif player == "Spiderman":
+  if player == "Spiderman":
     user = Spiderman()
         
   elif player == "Pikachu":

@@ -8,7 +8,6 @@ class Player:
     self.name = name                          
     self.health = 100 
     self.energy = 1
-    self.ki = 100
     self.moves = {}                           # create dictionary of moves
     
     # moves property is a dictionary - used to look up a Player's moves    
@@ -21,9 +20,6 @@ class Player:
   # status() method prints out a Player's name and health properties    
   def status(self): 
     print(self.name, " health: ", self.health)
-  
-  def Kibar(self):
-    print(self.name, " ki bar: ", self.ki)
     
   # attack() method: move that lowers health of enemy Player 
   # enemy: Player object 
@@ -46,11 +42,3 @@ class Player:
     n *= self.energy                  # multiplied by energy level
     self.health += round(n) 
     print(self.name, "healed self", n)
-  
-  
-
-
-
-
-
-

@@ -1,7 +1,6 @@
 #/bin/python3
 import random, time 
 from player import Player
-from secretchars import Goku
 ###########################
 #### Helper functions #####
 ###########################
