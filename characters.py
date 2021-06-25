@@ -253,33 +253,81 @@ class Olimar(Player):
     Player.__init__(self, "Olimar")
     self.moves.pop("attack")
     self.moves["pikmin pluck"] = self.pluck
-    self.moves["missile shot"] = self.missile
-    self.moves["zero laser"] = self.zero_laser
-    self.pikmins = []
+    self.moves["pikmin throw"] = self.throw
+    self.pikmins = 0
     self.poison = 5
 
-  def pluck(self, enemy):
+    self.redpikmin = 0
+    self.whitepikmin = 0
+    self.yellowpikmin = 0
+    self.purplepikmin = 0
 
-    def redpikmin(self, enemy):
+  def pluck(self, enemy):
+    def redpikmin():
       damage = 30
       self.attack(enemy, damage)
     
-    def yellowpikmin(self, enemy):
+    def yellowpikmin():
       damage = 17
       if random.random() >= 0.6:
         damage*2
       self.attack(enemy, damage)
 
-    def whitepikmin(self, enemy):
+    def whitepikmin():
       damage = 10
       damage += self.poison
       self.poison += 5
       self.attack(enemy, damage)
     
-    def purplepikmin(self, enemy):
+    def purplepikmin():
       damage = 35
       self.attack(enemy, damage)
 
+    self.pikmins += 1
     pikminchoices = [redpikmin, yellowpikmin, whitepikmin, purplepikmin]
     choice = random.choice(pikminchoices)
+    if choice == redpikmin:
+      self.redpikmin += 1
+    elif choice == yellowpikmin:
+      self.yellowpikmin += 1
+    elif choice == purplepikmin:
+      self.purplepikmin += 1
+    elif choice == whitepikmin:
+      self.whitepikmin += 1
     choice()
+  
+  def throw(self, enemy):
+    def redpikmin():
+      damage = 30
+      self.attack(enemy, damage)
+    
+    def yellowpikmin():
+      damage = 17
+      if random.random() >= 0.6:
+        damage*2
+      self.attack(enemy, damage)
+
+    def whitepikmin():
+      damage = 10
+      damage += self.poison
+      self.poison += 5
+      self.attack(enemy, damage)
+    
+    def purplepikmin():
+      damage = 35
+      self.attack(enemy, damage)
+
+    pikminchoices = [self.redpikmin, self.yellowpikmin, self.whitepikmin, self.purplepikmin]
+    choice = random.choice(pikminchoices)
+    if choice == self.redpikmin:
+      for pikmin in self.redpikmin:
+        redpikmin()
+    elif choice == self.yellowpikmin:
+      for pikmin in self.yellowpikmin:
+        yellowpikmin()
+    elif choice == self.purplepikmin:
+      for pikmin in self.purplepikmin:
+        purplepikmin()
+    elif choice == self.whitepikmin:
+      for pikmin in self.whitepikmin:
+        whitepikmin()
