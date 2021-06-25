@@ -360,3 +360,29 @@ class Olimar(Player):
   def endofday(self, enemy):
     damage = self.pikmins*7
     self.attack(enemy, damage)
+
+
+# Mario class
+class Mario(Player):
+  def __init__(self):
+    Player.__init__(self, "Mario")
+    self.moves.pop("attack")
+    self.moves["fireball"] = self.attack
+    self.moves["super jump punch"] = self.punch
+    self.moves["f.l.u.d.d."] = self.fludd
+    self.moves["mario finale"] = self.mario
+    self.waterpwr = 1
+
+  def punch(self, enemy):
+    self.attack(enemy, 30)
+  
+  def fludd(self, enemy):
+    damage = 20*self.waterpwr
+    self.attack(enemy, damage)
+    self.waterpwr+=0.4
+  
+  def mario(self, enemy):
+    self.energy+=0.2
+    self.attack(enemy, 30)
+
+

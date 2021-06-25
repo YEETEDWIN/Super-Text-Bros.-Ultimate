@@ -16,7 +16,7 @@ time.sleep(1)
 
 while True:
 
-  chars = ['Spiderman', 'Pikachu', 'Hercules', 'Jedi', 'Samus','Voldemort', 'Thanos', 'Medusa', 'Mr.Game & Watch', 'Pit', 'Sonic','Ganondorf','R.O.B.','Olimar']
+  chars = ['Spiderman', 'Pikachu', 'Hercules', 'Jedi', 'Samus','Voldemort', 'Thanos', 'Medusa', 'Mr.Game & Watch', 'Pit', 'Sonic','Ganondorf','R.O.B.','Olimar','Mario']
   secchars = ['Meta Knight']
 
   print("Do you want to choose your character or do you want it to be random? (Type 'c' for choose and 'r' for random.)")
@@ -75,20 +75,20 @@ while True:
   elif player == "Jedi":
     user = Jedi()
 
-  elif player == "Samus":
-    user = Samus()
-
   elif player == "Voldemort":
     user = Voldemort()
-
-  elif player == "Mr.Game & Watch":
-    user = MrGameandWatch()
 
   elif player == "Thanos":
     user = Thanos()
 
   elif player == "Medusa":
     user = Medusa()
+
+  elif player == "Samus":
+    user = Samus()
+
+  elif player == "Mr.Game & Watch":
+    user = MrGameandWatch()
 
   elif player == "Pit":
     user = Pit()
@@ -105,6 +105,9 @@ while True:
   elif player == "Olimar":
     user = Olimar()
 
+  elif player == "Mario":
+    user = Mario()
+
   elif player == "Meta Knight":
     user = MetaKnight()
 
@@ -120,20 +123,20 @@ while True:
   elif oppose == "Jedi":
     bot = Jedi()
 
-  elif oppose == "Samus":
-    bot = Samus()
-
   elif oppose == 'Voldemort':
     bot = Voldemort()
-
-  elif oppose == "Mr.Game & Watch":
-    bot = MrGameandWatch()
 
   elif oppose == 'Thanos':
     bot = Thanos()
     
   elif oppose == "Medusa":
     bot = Medusa()
+
+  elif oppose == "Samus":
+    bot = Samus()
+
+  elif oppose == "Mr.Game & Watch":
+    bot = MrGameandWatch()
 
   elif oppose == "Pit":
     bot = Pit()
@@ -146,6 +149,12 @@ while True:
 
   elif oppose == "R.O.B.":
     bot = ROB()
+
+  elif oppose == "Olimar":
+    bot = Olimar()
+
+  elif oppose == "Mario":
+    bot = Mario()
 
   elif oppose == "Meta Knight":
     bot = MetaKnight()
@@ -225,9 +234,11 @@ while True:
     new_round = input(">")
   
   if new_round == 'y' or new_round == 'yes':
+    clear()
     print("")
   
   elif new_round == 'n' or new_round == 'no':
+    clear()
     print("")
     print("Okay then.")
     break
