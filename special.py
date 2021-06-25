@@ -43,7 +43,7 @@ class Pikachu(Player):
     self.moves["evolve"] = self.evolve
     self.specialmove = 2
 
-# special move:
+  # special move:
   def thunder_shock(self, enemy):
     damage = random.randint(40, 50)
     self.attack(enemy, damage)
@@ -135,7 +135,7 @@ class Jedi(Player):
     self.moves["battlemind"] = self.force_mind
     self.specialmove = 2 # track use of special move
 
-# special support move (can only be used if energy is not too high)
+  # special support move (can only be used if energy is not too high)
   def force_mind(self, enemy):
     self.energy += 0.2 # increase energy (attack/heal strength)
     print("Meditation increases the concentration and willpower of " + self.name)
@@ -230,7 +230,5 @@ class Medusa(Player):
       time.sleep(1)
       print("The bite wasn't that bad!")
       self.attack(enemy, random.randint(15, 25))
-
-
 
 

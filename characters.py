@@ -245,3 +245,41 @@ class Samus(Player):
     else:
       print("Failed LASER!!!")
       self.attack(self, 20)
+
+
+# Pikmin & Olimar class
+class Olimar(Player):
+  def __init__(self):
+    Player.__init__(self, "Olimar")
+    self.moves.pop("attack")
+    self.moves["pikmin pluck"] = self.pluck
+    self.moves["missile shot"] = self.missile
+    self.moves["zero laser"] = self.zero_laser
+    self.pikmins = []
+    self.poison = 5
+
+  def pluck(self, enemy):
+
+    def redpikmin(self, enemy):
+      damage = 30
+      self.attack(enemy, damage)
+    
+    def yellowpikmin(self, enemy):
+      damage = 17
+      if random.random() >= 0.6:
+        damage*2
+      self.attack(enemy, damage)
+
+    def whitepikmin(self, enemy):
+      damage = 10
+      damage += self.poison
+      self.poison += 5
+      self.attack(enemy, damage)
+    
+    def purplepikmin(self, enemy):
+      damage = 35
+      self.attack(enemy, damage)
+
+    pikminchoices = [redpikmin, yellowpikmin, whitepikmin, purplepikmin]
+    choice = random.choice(pikminchoices)
+    choice()

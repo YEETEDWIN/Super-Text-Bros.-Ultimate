@@ -1,3 +1,8 @@
+import random, time, sys
+from player import Player
+from operator import add, mul, sub, truediv
+from getkey import getkey, keys
+
 class MetaKnight(Player):
 
   def __init__(self):

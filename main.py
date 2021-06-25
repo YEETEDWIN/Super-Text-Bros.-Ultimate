@@ -13,10 +13,11 @@ clear()
 print("Welcome to the battle game.")
 print("")
 time.sleep(1)
+
 while True:
 
   chars = ['Spiderman', 'Pikachu', 'Hercules', 'Jedi', 'Samus','Voldemort', 'Thanos', 'Medusa', 'Mr.Game & Watch', 'Pit', 'Sonic','Ganondorf','R.O.B.']
-  secchars = ['Meta Knight']
+  secchars = ['Meta Knight', 'Olimar']
 
   print("Do you want to choose your character or do you want it to be random? (Type 'c' for choose and 'r' for random.)")
   answer = input(">")
@@ -53,7 +54,6 @@ while True:
           break
 
   elif answer == 'r':
-    chars.extend(secchars)
     player = random.choice(chars)
     print("Your character is...")
     time.sleep(1)
@@ -101,6 +101,9 @@ while True:
 
   elif player == "R.O.B.":
     user = ROB()
+
+  elif player == "Olimar":
+    user = Olimar()
 
   elif player == "Meta Knight":
     user = MetaKnight()
