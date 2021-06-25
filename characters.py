@@ -331,3 +331,4 @@ class Olimar(Player):
     elif choice == self.whitepikmin:
       for pikmin in self.whitepikmin:
         whitepikmin()
+
