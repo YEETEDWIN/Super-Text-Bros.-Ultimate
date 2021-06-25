@@ -6,6 +6,17 @@ Super Smash Bros. Ultimate is a 2018 crossover fighting game developed by Bandai
 
 I wanted to make a mini version of Super Smash Bros. This is the demo version that just has text. My final version should have graphics (will be made in either pygame of pgzero). 
 
+# How to play locally?
+[![Python](https://img.shields.io/badge/python-v3.9.5-blue)](https://www.python.org/downloads/) [![Module](https://img.shields.io/badge/module-getkey-orange)](https://pypi.org/project/getkey/) [![Module](https://img.shields.io/badge/module-operator-orange)](https://docs.python.org/3/library/operator.html)
+You need the things above!
+Open Terminal (macOS)/Command Prompt (Linux)
+Go to your folder, example:
+
+'''
+$ cd Desktop
+$ python main.py
+'''
+
 ## Want your character?
 
 I like and want to improve the game. If you want your character in the game then you can report an issue on github and say your character's name, attack moves (how it works) and more details if you want!
