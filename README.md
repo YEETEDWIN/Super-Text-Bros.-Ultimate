@@ -8,6 +8,7 @@ I wanted to make a mini version of Super Smash Bros. This is the demo version th
 
 # How to play locally?
 [![Python](https://img.shields.io/badge/python-v3.9.5-blue)](https://www.python.org/downloads/) [![Module](https://img.shields.io/badge/module-getkey-orange)](https://pypi.org/project/getkey/) [![Module](https://img.shields.io/badge/module-operator-orange)](https://docs.python.org/3/library/operator.html)
+
 You need the things above!
 
 1. Open Terminal (macOS)/Command Prompt (Linux)
