@@ -2,7 +2,7 @@
 
 Super Smash Bros. Ultimate is a 2018 crossover fighting game developed by Bandai Namco Studios and Sora Ltd. and published by Nintendo for the Nintendo Switch. It is the fifth installment in the Super Smash Bros. series, succeeding Super Smash Bros. for Nintendo 3DS and Wii U. The game follows the series' traditional style of gameplay: controlling one of the various characters, players must use differing attacks to weaken their opponents and knock them out of an arena. It features a wide variety of game modes, including a campaign for single-player and multiplayer versus modes. Ultimate features over 80 playable fighters, including everyone from all previous Super Smash Bros. games alongside several newcomers. The roster ranges from Nintendo mascots to characters from third-party franchises, with the game being supported with post-release downloadable content that adds more fighters and other content.
 
-# Super Text Wars
+# Super Text Bros
 
 I wanted to make a mini version of Super Smash Bros. This is the demo version that just has text. My final version should have graphics (will be made in either pygame of pgzero). 
 
