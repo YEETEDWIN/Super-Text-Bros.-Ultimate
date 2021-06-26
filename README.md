@@ -25,7 +25,7 @@ This will run the program on your computer. Just so you know it is very much bro
 If you use visual studio code:
 1. Open VS Code
 2. Open this folder in VS Code
-3. go to [main.py](python.org) in the files
+3. go to [main.py](https://python.org) in the files
 4. Click the "run" button at the top right
 
 ## Want your character?
