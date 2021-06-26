@@ -385,4 +385,19 @@ class Mario(Player):
     self.energy+=0.2
     self.attack(enemy, 30)
 
+# Falco class
+class Falco(Player):
+  def __init__(self):
+    Player.__init__(self, "Falco")
+    self.moves.pop("attack")
+    self.moves["blaster"] = self.attack
+    self.moves["falco phantasm"] = self.phantasm
+    self.moves["reflector"] = self.reflector
+    self.moves["land master"] = self.landmaster
+
+  def phantasm(self, enemy):
+    if random.random() <= 0
+
+
+
 
