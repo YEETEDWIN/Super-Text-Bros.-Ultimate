@@ -2,7 +2,7 @@
 import random, time
 from player import Player
 from getkey import getkey, keys
-
+from threading import Thread
 
 # R.O.B. class
 class ROB(Player):
@@ -396,8 +396,51 @@ class Falco(Player):
     self.moves["land master"] = self.landmaster
 
   def phantasm(self, enemy):
-    if random.random() <= 0
+    if random.random() <= 1:
+      print("SLICE")
+      self.attack(enemy, 70)
+    else:
+      self.attack(enemy, 20)
+  
+  def reflector(self, enemy):
+    if random.random() <= 2:
+      print("REFLECTIONNNNNN-!")
+      damage = enemy.health/2
+      round(damage)
+      self.attack(enemy, damage)
+    else:
+      damage = enemy.health/4
+      round(damage)
+      self.attack(enemy, damage)
+    
+  def landmaster(self, enemy):
+    answer1 = None
+    choices = ["UP","DOWN","LEFT","RIGHT"]
+    direction1 = random.choice(choices)
 
+    def check1():
+      time.sleep(2)
+      if answer1 != None:
+        if answer1 == direction1:
+          self.attack(enemy, 50)
+          return
+        else:
+          print("Not correct choice you lose a turn")
+          return
+      print("Too slow, you lose a turn")
 
+    if direction1 == "UP":
+      Thread(target = check1).start()
+      answer1 = input("Type in UP\n>")
+      
+    elif direction1 == "DOWN":
+      Thread(target = check1).start()
+      answer1 = input("Type in DOWN\n")
+    elif direction1 == "LEFT":
+      Thread(target = check1).start()
+      answer1 = input("Type in LEFT\n")
+    elif direction1 == "RIGHT":
+      Thread(target = check1).start()
+      answer1 = input("Type in RIGHT\n")
 
 
