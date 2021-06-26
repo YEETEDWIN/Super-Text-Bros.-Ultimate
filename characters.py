@@ -396,14 +396,14 @@ class Falco(Player):
     self.moves["land master"] = self.landmaster
 
   def phantasm(self, enemy):
-    if random.random() <= 1:
+    if random.random() <= 0.1:
       print("SLICE")
-      self.attack(enemy, 70)
+      self.attack(enemy, 60)
     else:
       self.attack(enemy, 20)
   
   def reflector(self, enemy):
-    if random.random() <= 2:
+    if random.random() <= 0.2:
       print("REFLECTIONNNNNN-!")
       damage = enemy.health/2
       round(damage)
@@ -415,7 +415,7 @@ class Falco(Player):
     
   def landmaster(self, enemy):
     answer1 = None
-    choices = ["UP","DOWN","LEFT","RIGHT"]
+    choices = ["ABOVE","DOWN","LEFT","RIGHT"]
     direction1 = random.choice(choices)
 
     def check1():
@@ -425,14 +425,13 @@ class Falco(Player):
           self.attack(enemy, 50)
           return
         else:
-          print("Not correct choice you lose a turn")
+          print("Not correct choice you lose a turn \npress enter to continue")
           return
-      print("Too slow, you lose a turn")
+      print("Too slow, you lose a turn\npress enter to continue")
 
-    if direction1 == "UP":
+    if direction1 == "ABOVE":
       Thread(target = check1).start()
-      answer1 = input("Type in UP\n>")
-      
+      answer1 = input("Type in ABOVE\n>")
     elif direction1 == "DOWN":
       Thread(target = check1).start()
       answer1 = input("Type in DOWN\n")
