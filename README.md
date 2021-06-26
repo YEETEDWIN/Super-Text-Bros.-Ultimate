@@ -9,27 +9,29 @@ I wanted to make a mini version of Super Smash Bros. This is the demo version th
 # How to play locally?
 [![Python](https://img.shields.io/badge/python-v3.9.5-blue)](https://www.python.org/downloads/) [![Module](https://img.shields.io/badge/module-getkey-orange)](https://pypi.org/project/getkey/) [![Module](https://img.shields.io/badge/module-operator-orange)](https://docs.python.org/3/library/operator.html)
 You need the things above!
-Open Terminal (macOS)/Command Prompt (Linux)
-Go to your folder, example:
 
-'''
+1. Open Terminal (macOS)/Command Prompt (Linux)
+2. Go to your folder, example:
+
+```
 $ cd Desktop
+```
+3. Then type in
+```
 $ python main.py
-'''
+```
+This will run the program on your computer. Just so you know it is very much broken in my terminal, so I would recommend on using a python program such as visual studio code instead.
+
+If you use visual studio code:
+1. Open VS Code
+2. Open this folder in VS Code
+3. go to [main.py](python.org) in the files
+4. Click the "run" button at the top right
 
 ## Want your character?
 
-I like and want to improve the game. If you want your character in the game then you can report an issue on github and say your character's name, attack moves (how it works) and more details if you want!
-If you want you can just send the code via a pull request
-### To make a Pull Request
-1. The pull request should be in the most recent version of python.
-2. The pull request should be made via forking the repository and comparing their branches.
-3. I, YEETEDWIN shall decide if I should merge it inside.
+I like and want to improve the game. If you want your character in the game then you can report an issue on github and say your character's name, attack moves (how it works) and more details if you want! If you want you can just send the code via a [pull request](https://github.com/YEETEDWIN/Super-Text-Bros.-Ultimate/blob/main/REQUEST.md).
 
 ## Contributing
 
-If you want contribute to this repository, please first discuss the change you wish to make via issue.
-### To make a Pull Request
-1. The pull request should be in the most recent version of python.
-2. The pull request should be made via forking the repository and comparing their branches.
-3. I, YEETEDWIN shall decide if I should merge it inside.
+If you want contribute to this repository, please first discuss the change you wish to make via issue. After this I will ask for making a pull request.
