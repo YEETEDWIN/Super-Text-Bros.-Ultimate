@@ -1,7 +1,6 @@
 #!/bin/python3
 import random, time, os, sys
 from player import *
-from special import *
 from characters import *
 from helper import *
 
