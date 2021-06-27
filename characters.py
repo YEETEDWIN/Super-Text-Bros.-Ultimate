@@ -513,11 +513,12 @@ class Ness(Player):
     self.meteors = 4
 
   def flash(self, enemy):
-    if random.random() <= 0.3:
+    if random.random() <= 0.4:
       self.meteors += 1.5
       print(self.name +" has {} meteor power for starstorm".format(self.meteors))
     else:
-      self.attack(enemy, 20)
+      self.meteors += 1
+      print(self.name +" has {} meteor power for starstorm".format(self.meteors))
 
   def fire(self, enemy):
     if random.random() <= 0.4:
