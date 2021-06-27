@@ -3,7 +3,6 @@ import random, time, os, sys
 from player import *
 from special import *
 from characters import *
-from secretchars import *
 from helper import *
 
 def clear():
@@ -16,8 +15,8 @@ time.sleep(1)
 
 while True:
 
-  chars = ['Spiderman', 'Pikachu', 'Hercules', 'Jedi', 'Samus','Voldemort', 'Thanos', 'Medusa', 'Mr.Game & Watch', 'Pit', 'Sonic','Ganondorf','R.O.B.','Olimar','Mario','Falco']
-  secchars = ['Meta Knight']
+  chars = ['Spiderman', 'Pikachu', 'Hercules', 'Jedi', 'Samus','Voldemort', 'Thanos', 'Medusa', 'Mr.Game & Watch', 'Pit', 'Sonic','Ganondorf','Olimar','Mario','Falco','Wolf']
+  secchars = ['R.O.B.','Meta Knight']
 
   print("Do you want to choose your character or do you want it to be random? (Type 'c' for choose and 'r' for random.)")
   answer = input(">")
@@ -60,7 +59,7 @@ while True:
     print(player + "!")
     print("")
     time.sleep(1)
-    
+
   oppose = random.choice(chars)
 
   if player == "Spiderman":
@@ -110,6 +109,9 @@ while True:
 
   elif player == "Falco":
     user = Falco()
+
+  elif player == "Wolf":
+    user = Wolf()
 
   elif player == "Meta Knight":
     user = MetaKnight()
@@ -161,6 +163,9 @@ while True:
 
   elif oppose == "Falco":
     bot = Falco()
+
+  elif oppose == "Wolf":
+    bot = Wolf()
 
   elif oppose == "Meta Knight":
     bot = MetaKnight()
