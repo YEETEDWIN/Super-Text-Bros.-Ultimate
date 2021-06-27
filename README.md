@@ -1,5 +1,6 @@
 # NOW IN DEMO VERSION
 more characters coming soon + pygame version coming soon.
+100% Pure Python Game
 
 # Super Smash Bros
 
