@@ -15,7 +15,7 @@ time.sleep(1)
 
 while True:
 
-  chars = ['Spiderman', 'Pikachu', 'Hercules', 'Jedi', 'Samus','Voldemort', 'Thanos', 'Medusa', 'Mr.Game & Watch', 'Pit', 'Sonic','Ganondorf','Olimar','Mario','Falco','Wolf']
+  chars = ['Spiderman', 'Pikachu', 'Hercules', 'Jedi', 'Samus','Voldemort', 'Thanos', 'Medusa', 'Mr.Game & Watch', 'Pit', 'Sonic','Ganondorf','Olimar','Mario','Falco','Wolf','Ness']
   secchars = ['R.O.B.','Meta Knight']
 
   print("Do you want to choose your character or do you want it to be random? (Type 'c' for choose and 'r' for random.)")
@@ -113,6 +113,9 @@ while True:
   elif player == "Wolf":
     user = Wolf()
 
+  elif player == "Ness":
+    user = Ness()
+
   elif player == "Meta Knight":
     user = MetaKnight()
 
@@ -166,6 +169,9 @@ while True:
 
   elif oppose == "Wolf":
     bot = Wolf()
+
+  elif oppose == "Ness":
+    bot = Ness()
 
   elif oppose == "Meta Knight":
     bot = MetaKnight()

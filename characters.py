@@ -501,6 +501,44 @@ class Wolf(Player):
       Thread(target = check1).start()
       answer1 = input("Type in RIGHT\n")
 
+# Ness class
+class Ness(Player):
+  def __init__(self):
+    Player.__init__(self, "Ness")
+    self.moves.pop("attack")
+    self.moves["pk flash"] = self.flash
+    self.moves["pk fire"] = self.fire
+    self.moves["pk thunder"] = self.thunder
+    self.moves["pk starstorm"] = self.starstorm
+    self.meteors = 4
+
+  def flash(self, enemy):
+    if random.random() <= 0.3:
+      self.meteors += 1.5
+      print(self.name +" has {} meteor power for starstorm".format(self.meteors))
+    else:
+      self.attack(enemy, 20)
+
+  def fire(self, enemy):
+    if random.random() <= 0.4:
+      print("PK Fire!")
+      self.attack(enemy, 40)
+    else:
+      self.attack(enemy, 20)
+  
+  def thunder(self, enemy):
+    damage = self.enemy*7
+    damage/=5
+    damage/=2
+    damage/=1.5
+    round(damage)
+    self.attack(enemy, damage)
+  
+  def starstorm(self, enemy):
+    damage = self.meteors*11
+    round(damage)
+    self.attack(enemy, damage)
+    
 
 # Meta Knight class
 class MetaKnight(Player):
@@ -582,3 +620,5 @@ class MetaKnight(Player):
       time.sleep(1)
       print("You cannot use this move anymore.")
       self.moves.pop("galaxia darkness") # remove from dict of possible moves
+
+
