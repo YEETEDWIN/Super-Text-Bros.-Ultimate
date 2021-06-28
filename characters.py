@@ -501,6 +501,7 @@ class Wolf(Player):
       Thread(target = check1).start()
       answer1 = input("Type in RIGHT\n")
 
+
 # Ness class
 class Ness(Player):
   def __init__(self):
@@ -623,3 +624,4 @@ class MetaKnight(Player):
       self.moves.pop("galaxia darkness") # remove from dict of possible moves
 
 
+# cj

@@ -8,7 +8,7 @@ def clear():
   os.system('cls' if os.name == 'nt' else 'clear')
 
 clear()
-print("Welcome to the battle game.")
+print("Welcome to Super Text Bros. Ultimate.")
 print("")
 time.sleep(1)
 
