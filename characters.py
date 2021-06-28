@@ -427,6 +427,7 @@ class Falco(Player):
           return
         else:
           print("Not correct choice you lose a turn \npress enter to continue")
+          self.attack(enemy, 20)
           return
       print("Too slow, you lose a turn\npress enter to continue")
 
@@ -485,6 +486,7 @@ class Wolf(Player):
           return
         else:
           print("Not correct choice you lose a turn \npress enter to continue")
+          self.attack(enemy, 20)
           return
       print("Too slow, you lose a turn\npress enter to continue")
 
