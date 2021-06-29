@@ -36,7 +36,7 @@ If you use visual studio code:
 
 ## Want your character?
 
-I like and want to improve the game. If you have character suggestions or you want to make yourself a character in the game then you can report an issue on github and say your character's name, attack moves (how it works) and more details if you want! If you want you can just send the code via a [pull request](https://github.com/YEETEDWIN/Super-Text-Bros.-Ultimate/blob/main/REQUEST.md).
+I like and want to improve the game. If you have character suggestions or you want to make yourself a character in the game then you can report an issue on github and say your character's name, attack moves (how it works) and more details if you want (Use character template)! If you want you can just send the code via a [pull request](https://github.com/YEETEDWIN/Super-Text-Bros.-Ultimate/blob/main/REQUEST.md).
 
 ## Contributing
 
