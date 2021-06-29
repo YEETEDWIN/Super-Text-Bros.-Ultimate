@@ -2,7 +2,7 @@
 name: Bug report
 about: Create a report to help us improve the game
 title: "--Replace-With-Your-Bug!--"
-labels: Status: UNREAD, Category: Bug
+labels: 'STATUS: UNREAD'
 assignees: YEETEDWIN
 
 ---
