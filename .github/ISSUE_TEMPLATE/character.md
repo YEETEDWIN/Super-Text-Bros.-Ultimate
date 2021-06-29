@@ -2,7 +2,7 @@
 name: Your Character
 about: Create new character's not included in the Super Smash Bros.
 title: "--Replace-With-Character's-Name!--"
-labels: 'Status: UNREAD'
+labels: Status: UNREAD
 assignees: YEETEDWIN
 
 ---
